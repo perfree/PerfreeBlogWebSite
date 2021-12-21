@@ -1,0 +1,76 @@
+<h2 class="p-comment-nav-title">评论</h2>
+<div class="p-comment" id="p-comment">
+    <form class="layui-form">
+        <div class="p-comment-input-img">
+            <img src="/static/themes/PerfreeBlogWebSite/assets/imgs/user.png" width="50" height="50">
+        </div>
+        <div class="p-comment-input">
+            <div class="comment-input">
+                <input type="hidden" name="pid" id="pid">
+                <input type="hidden" name="topPid" id="topPid">
+                <input type="hidden" name="articleId" value="#(article.id??)" id="articleId">
+                <input type="text" name="userName" required  lay-verify="required" placeholder="* 昵称"  class="layui-input">
+                <input type="email" name="email" required  lay-verify="required" placeholder="* 邮箱" class="layui-input">
+                <input type="text" name="website" placeholder="网址" class="layui-input">
+            </div>
+            <div class="comment-text">
+                <textarea name="content" id="content" placeholder="* 评论内容" required  lay-verify="required" class="layui-textarea"></textarea>
+            </div>
+        </div>
+       <div class="p-comment-btn">
+           <button class="layui-btn p-btn" lay-submit lay-filter="commentForm">提交</button>
+       </div>
+        <div class="layui-clear"></div>
+    </form>
+</div>
+
+<div class="p-comment-list-container">
+    <div class="p-comment-list" id="p-comment-list">
+    </div>
+</div>
+
+<div id="commentPager"></div>
+
+<script id="commentTpl" type="text/html">
+    #[[
+        {{#  layui.each(d, function(index, item){ }}
+            <div class="p-c-l-comment">
+                <a class="p-c-l-img">
+                    <img src="{{item.avatar == '' ? '/static/themes/PerfreeBlogWebSite/assets/imgs/user.png' : item.avatar}}?s=32" width="50" height="50">
+                </a>
+                <div class="p-c-l-info">
+                    <div class="p-c-l-i-info">
+                        <h5>{{item.userName}}</h5>
+                        <span>{{layui.util.timeAgo(item.createTime, true)}}</span>
+                        <a href="JavaScript:;" data-pid="{{item.id}}" data-topPid="{{item.id}}" class="p-c-l-reply-btn">回复</a>
+                    </div>
+                    <div class="p-c-l-i-cotent">
+                        {{item.content}}
+                    </div>
+
+                    {{# if(item.child != null && item.child.length > 0){ }}
+                        {{#   for(var i=0;i< item.child.length; i++){ }}
+                            <div class="p-c-l-comment">
+                                <a class="p-c-l-img">
+                                    <img src="{{item.child[i].avatar == '' ? '/static/themes/PerfreeBlogWebSite/assets/imgs/user.png' : item.child[i].avatar}}?s=32" width="50" height="50">
+                                </a>
+                                <div class="p-c-l-info">
+                                    <div class="p-c-l-i-info">
+                                        <h5>{{item.child[i].userName}}</h5>
+                                        <span>{{layui.util.timeAgo(item.child[i].createTime, true)}}</span>
+                                        <a href="JavaScript:;" data-pid="{{item.child[i].id}}" data-topPid="{{item.id}}" class="p-c-l-reply-btn">回复</a>
+                                    </div>
+                                    <div class="p-c-l-i-cotent">
+                                        {{item.child[i].content}}
+                                    </div>
+                                </div>
+                                <div class="layui-clear"></div>
+                            </div>
+                        {{# } }}
+                    {{# } }}
+                </div>
+                <div class="layui-clear"></div>
+            </div>
+        {{#  }); }}
+    ]]#
+</script>

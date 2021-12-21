@@ -1,0 +1,20 @@
+.p-center .container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.theme{
+    border: 1px solid rgba(60,72,88,.15);
+    box-shadow: rgb(0 21 41 / 12%) 0px 0px 6px 3px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.theme .info{
+    border-top: 1px solid #ddd;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+.p-footer{
+    margin-top: 0;
+}

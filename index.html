@@ -1,0 +1,106 @@
+#include("/static/themes/PerfreeBlogWebSite/inc/_layout.html")
+#@layout()
+#define css()
+    <link href="/static/themes/PerfreeBlogWebSite/assets/css/index.css" rel="stylesheet"/>
+#end
+#define content()
+    <section class="p-c1">
+        <div class="container layui-row">
+            <div class="p-c1-l layui-col-xs12 layui-col-sm6 layui-col-md6">
+                <div class="desc">
+                    <h2>PerfreeBlog</h2>
+                    <p>一款Java开发的博客/CMS系统</p>
+
+                    <div class="p-info">
+                        <a href="//perfree.gitee.io" class="layui-btn p-btn" target="_blank"><i class="fa fa-flash"></i>  快速开始</a>
+                        <a href="//perfree.gitee.io" class="layui-btn p-btn-white" target="_blank"><i class="fa fa-book"></i>  官方文档</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-c1-r layui-col-xs12 layui-col-sm6 layui-col-md6">
+                <img src="/static/themes/PerfreeBlogWebSite/assets/imgs/index_bg2.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="p-c2">
+        <div class="container">
+            <h3>功能特性</h3>
+            <div class="layui-row layui-col-space30">
+                <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg3">
+                    <div class="icon"><i class="fa fa-code"></i></div>
+                    <h4>代码开源</h4>
+                    <p>系统在<a href="https://github.com/perfree/PerfreeBlog" target="_blank">GitHub</a>及<a href="https://gitee.com/perfree/PerfreeBlog" target="_blank">Gitee</a>上完全开源,且处于积极维护状态,您也可以在上面提交您的问题或者参与代码贡献。</p>
+                </div>
+                <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg3">
+                    <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                    <h4>快速高效</h4>
+                    <p>同时支持Markdown和富文本编辑器,易读更易写,编辑器支持一键插入视频、图片、附件等,给您带来全新的写作体验</p>
+                </div>
+                <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg3">
+                    <div class="icon"><i class="fa fa-dashboard"></i></div>
+                    <h4>主题系统</h4>
+                    <p>完善的主题系统,支持主题自定义配置,支持在线安装、切换、编辑、预览主题,无需开发工具,在后台即可创作专属于你的主题</p>
+                </div>
+                <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg3">
+                    <div class="icon"><i class="fa fa-leaf"></i></div>
+                    <h4>插件系统</h4>
+                    <p>强大的扩展插件功能,更近一步满足您的需求,插件开发简单,与开发SpringBoot程序基本一致,无需学习成本</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-c3">
+        <div class="container">
+            <h3>最新主题</h3>
+            <div class="layui-row layui-col-space30" id="themeList">
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="p-c4">
+        <div class="container">
+            <h3>最新插件</h3>
+            <div class="layui-row layui-col-space30" id="pluginList">
+            </div>
+        </div>
+    </section>
+#end
+#define script()
+<script id="themeTpl" type="text/html">
+    #[[
+    {{#  layui.each(d, function(index, item){ }}
+    <a href="{{item.url}}" class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg4">
+        <div class="theme">
+            <div class="img">
+                <img src="/static/public/images/loading.gif" lay-src="{{item.thumbnail}}" width="100%" height="220px">
+            </div>
+            <div class="info">
+                <h4>{{item.title}}</h4>
+            </div>
+        </div>
+    </a>
+    {{#  }); }}
+    ]]#
+</script>
+<script id="pluginTpl" type="text/html">
+    #[[
+    {{#  layui.each(d, function(index, item){ }}
+    <a href="{{item.url}}" class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg4">
+        <div class="plugin">
+            <div class="img">
+                <img src="/static/public/images/loading.gif" lay-src="{{item.thumbnail}}" width="100%" height="220px">
+            </div>
+            <div class="info">
+                <h4>{{item.title}}</h4>
+            </div>
+        </div>
+    </a>
+    {{#  }); }}
+    ]]#
+</script>
+<script src="/static/themes/PerfreeBlogWebSite/assets/js/index.js"></script>
+#end

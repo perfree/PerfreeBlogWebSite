@@ -1,0 +1,33 @@
+.editormd-html-preview blockquote, .editormd-preview-container blockquote{
+    color: #666;
+    border-left: 4px solid #3d5ac0;
+    padding-left: 20px;
+    margin-left: 0;
+    font-size: 14px;
+    font-style: italic;
+    background: whitesmoke;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.markdown-body img{
+    box-shadow: 1px 4px 13px 0 rgb(0 0 0 / 10%);
+}
+.markdown-body{
+    color: #666;
+}
+.markdown-body li{
+    list-style: auto;
+}
+.p-title-nav p{
+    padding-bottom: 15px;
+}
+.p-title-nav .info{
+    text-align: center;
+    padding-bottom: 85px;
+}
+.p-title-nav .info .p-btn{
+    margin-top: 10px;
+}
+.editormd-html-preview, .editormd-preview-container{
+    padding: 20px 0;
+}

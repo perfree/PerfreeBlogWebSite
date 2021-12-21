@@ -1,0 +1,64 @@
+#include("/static/themes/PerfreeBlogWebSite/inc/_layout.html")
+#@layout()
+#define css()
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/editor.md@1.5.0/css/editormd.preview.min.css">
+<link href="//cdn.jsdelivr.net/npm/viewerjs@1.10.2/dist/viewer.min.css" rel="stylesheet">
+<link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/atom-one-light.min.css" rel="stylesheet">
+<link href="/static/themes/PerfreeBlogWebSite/assets/css/article.css?v=0.03" rel="stylesheet"/>
+<link href="/static/themes/PerfreeBlogWebSite/assets/css/comment.css?v=0.03" rel="stylesheet"/>
+#end
+#define content()
+    <section class="p-title-nav">
+        <div class="container">
+            <h2>#(article.title)</h2>
+            <p>
+                <i class="fa fa-user-o"></i> #(article.creator ??)&nbsp;
+
+                <i class="fa fa-clock-o"></i> #date(article.createTime, "yyyy年MM月dd日")&nbsp;
+
+                <i class="fa fa-eye"></i> #(article.viewCount ??)
+            </p>
+            <div class="info">
+                #if(article.previewUrl != null && article.previewUrl != "")
+                    <a href="#(article.previewUrl)" target="_blank" class="layui-btn p-btn"><i class="fa fa-eye"></i>  在线预览</a>
+                #end
+                #if(article.downloadUrl != null && article.downloadUrl != "")
+                    <a href="#(article.downloadUrl)" target="_blank" class="layui-btn p-btn"><i class="fa fa-download"></i>  主题下载</a>
+                #end
+                #if(article.docUrl != null && article.docUrl != "")
+                    <a href="#(article.docUrl)" target="_blank" class="layui-btn p-btn"><i class="fa fa-book"></i>  使用文档</a>
+                #end
+            </div>
+        </div>
+    </section>
+   
+    <section class="p-center">
+        <div class="container">
+            <div class="art-content markdown-body editormd-html-preview" id="art-content">
+                #mdToHtml(article.content??)
+            </div>
+
+            #include("/static/themes/PerfreeBlogWebSite/inc/_comment.html")
+        </div>
+    </section>
+#end
+#define script()
+<script src="//cdn.jsdelivr.net/npm/viewerjs@1.10.2/dist/viewer.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+<script src="/static/themes/PerfreeBlogWebSite/assets/js/comment.js?v=0.03"></script>
+<script>
+    initViewer();
+    hljs.initHighlightingOnLoad();
+    /**
+     * 初始化图片查看
+     */
+    function initViewer() {
+        const articleContentDetail = document.getElementById('art-content');
+        if (articleContentDetail){
+            new Viewer(articleContentDetail, {
+                url: 'src'
+            });
+        }
+    }
+</script>
+#end

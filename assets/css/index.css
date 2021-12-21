@@ -1,0 +1,134 @@
+
+
+/*******/
+.p-c1{
+    background: #3d5ac0;
+}
+
+.p-c1-r{
+    text-align: right;
+}
+.p-c1-r img{
+    max-width: 450px;
+}
+
+
+
+/****/
+.p-c1-l .desc{
+    padding-top: 140px;
+    padding-left: 10px;
+}
+.p-c1-l h2{
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.p-c1-l p{
+    color: white;
+    font-size: 15px;
+}
+.p-c1-l .p-info{
+    margin-top: 20px;
+}
+
+
+/***/
+.p-c2 h3{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    color: #454a5b;
+    margin-bottom: 35px;
+}
+.p-c2 .icon {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.p-c2 .icon .fa{
+    font-size: 28px;
+    background: #ffc53d;
+    width: 50px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    border-radius: 15px;
+}
+
+.p-c2 h4{
+    font-size: 18px;
+    color: #454a5b;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.p-c2 p{
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+}
+/***/
+.p-c3 h3{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    color: #454a5b;
+    margin-bottom: 35px;
+}
+.p-c3 .theme{
+    border: 1px solid rgba(60,72,88,.15);
+    box-shadow: rgb(0 21 41 / 12%) 0px 0px 6px 3px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.p-c3 .theme .info{
+    border-top: 1px solid #ddd;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/***/
+.p-c4 h3{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    color: #454a5b;
+    margin-bottom: 35px;
+}
+
+.p-c4 .plugin{
+    border: 1px solid rgba(60,72,88,.15);
+    box-shadow: rgb(0 21 41 / 12%) 0px 0px 6px 3px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.p-c4 .plugin .info{
+    border-top: 1px solid #ddd;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+.p-c2 p a{
+    color: #1890ff;
+}
+@media (max-width: 1200px) {
+    .p-c1-r img{
+        max-width: 100%;
+        width: 100%;
+    }
+
+}
+@media (max-width: 800px) {
+    .p-c1-r{
+        text-align: center;
+    }
+}
+@media (max-width: 780px) {
+    .p-c1-r img{
+        max-height: 400px;
+    }
+}

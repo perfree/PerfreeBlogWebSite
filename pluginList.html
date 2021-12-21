@@ -1,0 +1,41 @@
+#include("/static/themes/PerfreeBlogWebSite/inc/_layout.html")
+#@layout()
+#define css()
+    <link href="/static/themes/PerfreeBlogWebSite/assets/css/pluginList.css" rel="stylesheet"/>
+#end
+#define content()
+    <section class="p-title-nav">
+        <div class="container">
+            <h2>插件仓库</h2>
+            <p>收录了目前PerfreeBlog支持的插件,更多插件持续更新中...</p>
+        </div>
+    </section>
+   
+    <section class="p-center">
+        <div class="container">
+            <div class="layui-row layui-col-space30" id="pluginList"></div>
+            <div id="pager">
+
+            </div>
+        </div>
+    </section>
+#end
+#define script()
+    <script id="pluginTpl" type="text/html">
+        #[[
+        {{#  layui.each(d, function(index, item){ }}
+        <a href="{{item.url}}" class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg4">
+            <div class="plugin">
+                <div class="img">
+                    <img src="/static/public/images/loading.gif" lay-src="{{item.thumbnail == '' ? '/static/themes/PerfreeBlogWebSite/assets/imgs/noImg.svg' : item.thumbnail}}" width="100%" height="220px">
+                </div>
+                <div class="info">
+                    <h4>{{item.title}}</h4>
+                </div>
+            </div>
+        </a>
+        {{#  }); }}
+        ]]#
+    </script>
+    <script src="/static/themes/PerfreeBlogWebSite/assets/js/pluginList.js"></script>
+#end

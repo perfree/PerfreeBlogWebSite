@@ -1,0 +1,110 @@
+.p-comment-nav-title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #666;
+}
+.p-comment{
+    margin-top: 20px;
+}
+.p-comment .p-comment-input{
+    width: calc(100% - 64px);
+    display: inline-block;
+    padding-left: 14px;
+}
+.p-comment .comment-input{
+    width: 100%;
+    display: flex;
+    margin: 0;
+}
+
+.p-comment .comment-input input{
+    margin-right: 10px;
+}
+.p-comment .comment-input input:last-child{
+    margin-right: 0;
+}
+.p-comment .comment-text{
+    margin-top: 10px;
+}
+.p-comment .p-comment-input-img{
+    width: 50px;
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.p-comment .p-comment-btn{
+    text-align: right;
+    margin-top: 15px;
+}
+.p-comment .p-comment-btn .p-btn{
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.p-comment-list-container{
+}
+.p-comment-list .p-c-l-img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+}
+.p-comment-list .p-c-l-info{
+    float: left;
+    width: calc(100% - 65px);
+    margin-left: 15px;
+    position: relative;
+}
+
+.p-comment-list .p-c-l-info .p-c-l-i-info h5{
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 600;
+    color: #666;
+}
+.p-comment-list .p-c-l-info .p-c-l-i-info span{
+    font-size: 12px;
+    padding-left: 10px;
+    color: #5a5959;
+}
+.p-comment-list .p-c-l-info .p-c-l-i-cotent{
+    margin-top: 10px;
+    background: #f6f6f6;
+    padding: 15px;
+    border-radius: 5px;
+    color: #565656;
+}
+.p-comment-list .p-c-l-comment{
+    margin-top: 20px;
+}
+.p-comment-list .p-c-l-comment .p-c-l-comment{
+    margin-left: -30px;
+}
+.p-c-l-reply-btn{
+    position: absolute;
+    right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: #666;
+}
+.p-c-l-reply-btn:hover{
+    color: #1890ff;
+}
+
+@media (max-width: 800px) {
+    .p-comment .comment-input{
+        flex-direction: column;
+    }
+    .p-comment .comment-input input{
+        margin-right: 0;
+        margin-top: 10px;
+    }
+    .p-comment .comment-input input:first-child{
+        margin-top: 0;
+    }
+}
