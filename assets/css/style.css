@@ -9,6 +9,10 @@
     width: 8px;
     height: 8px;
 }
+html body#loading-hide{
+      overflow: hidden;
+    display: block!important;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -19,13 +23,10 @@ body{
     height: 100vh;
     line-height: 100vh;
     background: #eff2f5;
-    justify-content: center;
-    display: flex;
-    align-items: center;
     z-index: 99999999;
 }
 .loading{
-    width: 80px;
+    width: 90px;
     height: 40px;
     margin: 0 auto;
 }
