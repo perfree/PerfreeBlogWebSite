@@ -2,7 +2,7 @@
 
 /*******/
 .p-c1{
-    background: #3d5ac0;
+    background: var(--primary);
 }
 
 .p-c1-r{
@@ -77,17 +77,25 @@
     margin-bottom: 35px;
 }
 .p-c3 .theme{
-    border: 1px solid rgba(60,72,88,.15);
-    box-shadow: rgb(0 21 41 / 12%) 0px 0px 6px 3px;
-    border-radius: 5px;
+    border: 1px solid #ebeef5;
     overflow: hidden;
+    box-shadow: rgb(0 21 41 / 8%) 0 0 5px 2px;
+    transition: box-shadow .5s;
+    -moz-transition: box-shadow .5s;
+    -webkit-transition: box-shadow .5s;
+    -o-transition: box-shadow .5s;
+    border-radius: 4px;
 }
 .p-c3 .theme .info{
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ebeef5;
     height: 50px;
     line-height: 50px;
     text-align: center;
     font-size: 18px;
+    color: #4e637e;
+}
+.p-c3 .theme:hover{
+    box-shadow: rgb(0 21 41 / 12%) 0px 0px 6px 3px;
 }
 
 /***/
@@ -100,20 +108,28 @@
 }
 
 .p-c4 .plugin{
-    border: 1px solid rgba(60,72,88,.15);
-    box-shadow: rgb(0 21 41 / 12%) 0px 0px 6px 3px;
-    border-radius: 5px;
+    border: 1px solid #ebeef5;
     overflow: hidden;
+    box-shadow: rgb(0 21 41 / 8%) 0 0 5px 2px;
+    transition: box-shadow .5s;
+    -moz-transition: box-shadow .5s;
+    -webkit-transition: box-shadow .5s;
+    -o-transition: box-shadow .5s;
+    border-radius: 4px;
 }
 .p-c4 .plugin .info{
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ebeef5;
     height: 50px;
     line-height: 50px;
     text-align: center;
     font-size: 18px;
+    color: #4e637e;
+}
+.p-c4 .plugin:hover{
+    box-shadow: rgb(0 21 41 / 12%) 0px 0px 6px 3px;
 }
 .p-c2 p a{
-    color: #1890ff;
+    color: var(--primaryB);
 }
 @media (max-width: 1200px) {
     .p-c1-r img{

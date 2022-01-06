@@ -1,6 +1,6 @@
 .editormd-html-preview blockquote, .editormd-preview-container blockquote{
     color: #666;
-    border-left: 4px solid #3d5ac0;
+    border-left: 4px solid var(--primary);
     padding-left: 20px;
     margin-left: 0;
     font-size: 14px;

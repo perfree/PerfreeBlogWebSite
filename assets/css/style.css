@@ -9,61 +9,19 @@
     width: 8px;
     height: 8px;
 }
-html body#loading-hide{
-      overflow: hidden;
-    display: block!important;
+html{
+    --primary: #3d5ac0; /** #3d5ac0,#3a4260 */
+    --primaryB: #1890ff;/** #1890ff,#1890ff */
+    --primary-border: #3954b3;/** #3954b3,#343b56 */
+    --header-nav-border: #7db4fb;/** #7db4fb,#1890ff */
 }
 body{
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
 }
-#loading{
-    width: 100%;
-    height: 100vh;
-    line-height: 100vh;
-    background: #eff2f5;
-    z-index: 99999999;
-}
-.loading{
-    width: 90px;
-    height: 40px;
-    margin: 0 auto;
-}
-.loading span{
-    display: inline-block;
-    width: 10px;
-    height: 100%;
-    border-radius: 8px;
-    background: #3d5ac0;
-    -webkit-animation: load 1s ease infinite;
-    margin-right: 8px;
-}
-@-webkit-keyframes load{
-    0%,100%{
-        height: 40px;
-        background: #3d5ac0;
-    }
-    50%{
-        height: 70px;
-        margin: -20px 0;
-        background: lightblue;
-    }
-}
-.loading span:nth-child(2){
-    -webkit-animation-delay:0.2s;
-}
-.loading span:nth-child(3){
-    -webkit-animation-delay:0.4s;
-}
-.loading span:nth-child(4){
-    -webkit-animation-delay:0.6s;
-}
-.loading span:nth-child(5){
-    -webkit-animation-delay:0.8s;
-}
 .p-header{
-    background: #3d5ac0;
+    background: var(--primary);
     position: fixed;
     top: 0;
     left: 0;
@@ -104,7 +62,7 @@ body{
     text-align: left;
 }
 .p-header .layui-nav .layui-this:after, .layui-nav-bar{
-    background-color: #7db4fb;
+    background-color: var(--header-nav-border);
     height: 3px;
 }
 .p-header .layui-nav .layui-nav-item .layui-nav-child a{
@@ -117,7 +75,7 @@ body{
 /***/
 .p-title-nav{
     padding-top: 60px;
-    background: #3d5ac0;
+    background: var(--primary);
 }
 .p-title-nav h2{
     text-align: center;
@@ -135,7 +93,7 @@ body{
 /***/
 .p-footer{
     margin-top: 30px;
-    background: #3d5ac0;
+    background: var(--primary);
 }
 .p-footer .container{
     padding-top: 30px;
@@ -151,10 +109,12 @@ body{
 .p-footer ul a{
     color: white;
 }
-
+.p-center{
+    min-height: calc(100vh - 585px);
+}
 /***/
 .p-footer-bar{
-    border-top: 1px solid #3954b3;
+    border-top: 1px solid var(--primary-border);
     height: 50px;
     line-height: 50px;
     padding: 0;
@@ -166,7 +126,7 @@ body{
 }
 
 .p-btn{
-    background-color: #1890ff;
+    background-color: var(--primaryB);
 }
 .p-btn-white{
     background-color: #fff;
@@ -181,10 +141,10 @@ body{
     text-align: center;
 }
 #pager .layui-laypage .layui-laypage-curr .layui-laypage-em,#commentPager .layui-laypage .layui-laypage-curr .layui-laypage-em{
-    background-color: #3d5ac0;
+    background-color: var(--primary);
 }
 #pager .layui-laypage a:hover,#commentPager .layui-laypage a:hover{
-    color: #3d5ac0;
+    color: var(--primary);
 }
 
 .p-header .nav-bar-btn{
@@ -230,7 +190,7 @@ body{
     .p-header .container .p-nav{
         display: none;
         flex-direction: column;
-        background: #3d5ac0;
+        background: var(--primary);
         position: fixed;
         top: 60px;
         padding: 0;
@@ -242,7 +202,7 @@ body{
         border-bottom: 1px solid #3854bb;
     }
     .p-header .container .p-nav .layui-nav-item{
-        background: #3d5ac0;
+        background: var(--primary);
         padding-left: 20px;
     }
     .p-header .layui-nav .layui-this:after, .layui-nav-bar{
@@ -261,7 +221,7 @@ body{
         margin: 0;
     }
     .p-header .p-nav .layui-this a{
-        color: #1890ff;
+        color: var(--primaryB);
     }
 }
 @media (max-width: 750px) {

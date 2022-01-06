@@ -93,7 +93,7 @@
     color: #666;
 }
 .p-c-l-reply-btn:hover{
-    color: #1890ff;
+    color: var(--primaryB);
 }
 
 @media (max-width: 800px) {
