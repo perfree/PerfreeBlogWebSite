@@ -26,3 +26,6 @@
 .p-footer{
     margin-top: 0;
 }
+.theme .img img, .plugin .img img{
+    object-fit: cover;
+}

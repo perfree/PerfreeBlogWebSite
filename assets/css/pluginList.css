@@ -11,6 +11,10 @@
     -webkit-transition: box-shadow .5s;
     -o-transition: box-shadow .5s;
     border-radius: 4px;
+    position: relative;
+}
+.theme .img img, .plugin .img img{
+    object-fit: cover;
 }
 .plugin .info{
     border-top: 1px solid #ebeef5;
@@ -25,4 +29,17 @@
 }
 .p-footer{
     margin-top: 0;
+}
+.tip{
+    position: absolute;
+    left: 5px;
+    background: #0000006e;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    top: 5px;
+}
+.tip .fa{
+    margin-right: 3px;
 }

@@ -85,6 +85,7 @@
     -webkit-transition: box-shadow .5s;
     -o-transition: box-shadow .5s;
     border-radius: 4px;
+    position: relative;
 }
 .p-c3 .theme .info{
     border-top: 1px solid #ebeef5;
@@ -96,6 +97,9 @@
 }
 .p-c3 .theme:hover{
     box-shadow: rgb(0 21 41 / 12%) 0px 0px 6px 3px;
+}
+.theme .img img, .plugin .img img{
+    object-fit: cover;
 }
 
 /***/
@@ -116,6 +120,7 @@
     -webkit-transition: box-shadow .5s;
     -o-transition: box-shadow .5s;
     border-radius: 4px;
+    position: relative;
 }
 .p-c4 .plugin .info{
     border-top: 1px solid #ebeef5;
@@ -130,6 +135,19 @@
 }
 .p-c2 p a{
     color: var(--primaryB);
+}
+.tip{
+    position: absolute;
+    left: 5px;
+    background: #0000006e;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    top: 5px;
+}
+.tip .fa{
+    margin-right: 3px;
 }
 @media (max-width: 1200px) {
     .p-c1-r img{
